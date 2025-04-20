@@ -1,0 +1,82 @@
+[window]
+# Set the opacity of the terminal (0 is invisible, 1 is not being able to see the window behind alacritty)
+opacity = 0.86
+
+# decorations = "Full" shows the title bar and the window and "None" Shows nothing.
+decorations = "None"
+
+# Only applicable when decorations is set to "Full"
+# "None" -> System Default
+# "Dark" -> Dark Mode
+# "Light" -> Light Mode
+# decorations_theme_variant = "Dark"
+
+# Defines the size of window when alacritty is spawned.
+# "Maximized" max size but no fullscreen
+startup_mode = "Fullscreen"
+
+# Padding added at both sides of the alacritty
+padding.x = 15
+padding.y = 5
+
+# Start alacritty in fullscreen mode every time.
+# Resizes window based on increment steps equal to cell dimension.
+resize_increments = true
+
+# Z-index of alacritty
+# "Normal" -> Follows z-index assigned by system.
+# "AlwaysOnTop" -> Always on top terminal
+level = "Normal"
+
+# Equals out the padding
+dynamic_padding = true
+
+
+[scrolling]
+# How many lines you want alacritty to remember beyond the visible screen.
+# Making it equal to 0 will completely prevent scrolling.
+history = 50000
+
+# For every 1 scroll you do, how many scrolls you want alacritty to do.
+multiplier = 2
+
+
+[font]
+# Default font
+normal.family = "Noto Sans Mono"
+
+# font size
+size = 11.0
+
+# Controls spacing between characters in the x-axis
+offset.x = 0
+# Controls spacing between lines (line-spacing)
+offset.y = 0
+
+
+# Defines which colour is being in what kind of place.
+# Colors are defined using hexadecimal values. eg. #1a1a1a
+[colors]
+cursor = { text = "#000000", cursor = "#5af78e" }
+vi_mode_cursor= { text = "#000000", cursor = "#ffcc00" }
+
+[colors.primary]
+foreground = "#d8d8d8"
+background = "#1a1a1a"
+dim_foreground = "#828282"
+
+[selection]
+save_to_clipboard = true
+
+# This mode is useless when using tmux
+[[keyboard.bindings]]
+key = "Space"
+mods = "Control"
+action = "None"
+
+[cursor]
+style = { shape = "Block", blinking = "Always" }
+vi_mode_style = { shape = "Block", blinking = "Always" }
+unfocused_hollow = true
+thickness = 0.15
+

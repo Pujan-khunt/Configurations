@@ -1,0 +1,88 @@
+-- -- Keymaps are automatically loaded on the VeryLazy event
+-- -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- -- Add any additional keymaps here
+-- local map = vim.keymap.set
+--
+-- -- 1. Keymap for disabling relative line numbers
+-- function ToggleRelativeLineNumbers()
+--   vim.wo.relativenumber = not vim.wo.relativenumber
+-- end
+--
+-- map(
+--   "n",
+--   "<leader>ro",
+--   ToggleRelativeLineNumbers,
+--   { noremap = true, silent = true, desc = "Toggle Relative Line Numbers" }
+-- )
+--
+-- -- 2. Keymap for adding line below and above the cursor in normal mode.
+-- -- vim.keymap.set("n", "<leader>O", AddLineBelowCursor, {noremap = true, silent = true, desc = "Add Line Below Cursor"});
+-- -- vim.keymap.set("n", "<leader>o", AddLineAboveCursor, {noremap = true, silent = true, desc = "Add Line Above Cursor"});
+--
+-- map("n", "<leader>o", "m`o<Esc>``", { noremap = true, silent = true, desc = "Add Line Below Cursor" })
+-- map("n", "<leader>O", "m`O<Esc>``", { noremap = true, silent = true, desc = "Add Line Above Cursor" })
+--
+-- -- 3. Keymap for toggling dotfiles in the snacks directory. (TESTING -> NOT CONFIRMED YET -> APRIL 10, 2025)
+-- local function ToggleDotfiles()
+--   local dir = vim.fn.expand("%:p:h")
+--   if dir:match("/snacks/") then
+--     dir = dir:gsub("/snacks/", "/snacks/.")
+--   else
+--     dir = dir:gsub("/snacks/%.", "/snacks/")
+--   end
+--   vim.cmd("cd " .. dir)
+-- end
+--
+-- vim.keymap.set("n", "<leader>rd", ToggleDotfiles, { noremap = true, silent = true, desc = "Toggle Dotfiles" })
+--
+-- -- 4. Keymap for toggling the terminal window
+-- local function ToggleTerminal()
+--   local term = vim.fn.expand("%:p:h")
+--   if term:match("/terminal/") then
+--     term = term:gsub("/terminal/", "/terminal/.")
+--   else
+--     term = term:gsub("/terminal/%.", "/terminal/")
+--   end
+--   vim.cmd("cd " .. term)
+-- end
+--
+-- vim.keymap.set("n", "<leader>rt", ToggleTerminal, { noremap = true, silent = true, desc = "Toggle Terminal" })
+--
+-- -- 5. Keymap for toggling the file true
+-- local function ToggleFile()
+--   local file = vim.fn.expand("%:p:h")
+--   if file:match("/file/") then
+--     file = file:gsub("/file/", "/file/.")
+--   else
+--     file = file:gsub("/file/%.", "/file/")
+--   end
+--   vim.cmd("cd " .. file)
+-- end
+--
+-- vim.keymap.set("n", "<leader>rf", ToggleFile, { noremap = true, silent = true, desc = "Toggle File" })
+--
+-- -- 6. Keymap for toggling copilot
+-- local function ToggleCopilot()
+--   local copilot = vim.fn.expand("%:p:h")
+--   if copilot:match("/copilot/") then
+--     copilot = copilot:gsub("/copilot/", "/copilot/.")
+--   else
+--     copilot = copilot:gsub("/copilot/%.", "/copilot/")
+--   end
+--   vim.cmd("cd " .. copilot)
+-- end
+--
+-- vim.keymap.set("n", "<leader>rc", ToggleCopilot, { noremap = true, silent = true, desc = "Toggle Copilot" })
+--
+-- -- 7. Keymap for copilot suggestion
+-- local function CopilotSuggestion()
+--   local suggestion = vim.fn.expand("%:p:h")
+--   if suggestion:match("/suggestion/") then
+--     suggestion = suggestion:gsub("/suggestion/", "/suggestion/.")
+--   else
+--     suggestion = suggestion:gsub("/suggestion/%.", "/suggestion/")
+--   end
+--   vim.cmd("cd " .. suggestion)
+-- end
+--
+-- vim.keymap.set("n", "<leader>rs", CopilotSuggestion, { noremap = true, silent = true, desc = "Copilot Suggestion" })
